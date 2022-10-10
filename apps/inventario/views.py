@@ -49,11 +49,14 @@ class CategoriaUpdateView(UpdateAPIView):
         else:
             return Response({"error": serializer.errors})
 
+
 class CategoriaDeleteView(DestroyAPIView):
     permission_classes = (AllowAny, )
     queryset = Categoria.objects.all()
-    
+
 # listar la sub-categoria
+
+
 class SubCategoriaListView(ListAPIView):
     permission_classes = (AllowAny,)
     serializer_class = SubCategoriaSerializer
@@ -88,6 +91,11 @@ class SubCategoriaUpdateView(UpdateAPIView):
 
         else:
             return Response({"error": serializer.errors})
+
+
+class SubCategoriaDeleteView(DestroyAPIView):
+    permission_classes = (AllowAny, )
+    queryset = SubCategoria.objects.all()
 
 
 # listar producto

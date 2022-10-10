@@ -2,7 +2,7 @@ function CategoriaForm({ loading, onChange, onSubmit, descripcion, uc, id }) {
   return (
     <>
       <h2 className="text-2xl font-gilroy-black tracking-tight text-gray-900 sm:text-3xl dark:text-gray-400 py-4 ">
-        {id  ? "Actualizar la Categoria" : "Crear Categoria"}
+        {id ? "Actualizar la Categoria" : "Crear Categoria"}
       </h2>
       <form onSubmit={(e) => onSubmit(e)}>
         <div class="relative z-0 mb-6 w-full group">
@@ -57,7 +57,5 @@ function CategoriaForm({ loading, onChange, onSubmit, descripcion, uc, id }) {
     </>
   );
 }
-
-
 
 export default CategoriaForm;

@@ -39,3 +39,9 @@ class ClienteUpdateView(UpdateAPIView):
 
         else:
             return Response({"error": serializer.errors})
+
+
+class ClienteDeleteView(DestroyAPIView):
+    permission_classes = (AllowAny, )
+    queryset = Cliente.objects.all()
+

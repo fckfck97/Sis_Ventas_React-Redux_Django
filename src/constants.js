@@ -13,6 +13,7 @@ export const categoriaDeleteURL = `${endpoint}/inventario/categoria-delete/`;
 export const subcategoriaListURL = `${endpoint}/inventario/subcategoria-list`;
 export const subcategoriaCreatetURL = `${endpoint}/inventario/subcategoria-create`;
 export const subcategoriaUpdateURL = `${endpoint}/inventario/subcategoria-update/`;
+export const subcategoriaDeleteURL = `${endpoint}/inventario/categoria-delete/`;
 //producto
 export const productoListURL = `${endpoint}/inventario/producto-list`;
 export const productoCreatetURL = `${endpoint}/inventario/producto-create`;
@@ -21,7 +22,9 @@ export const productoUpdateURL = `${endpoint}/inventario/producto-update/`;
 export const clienteListURL = `${endpoint}/facturacion/cliente-list`;
 export const clienteCreatetURL = `${endpoint}/facturacion/cliente-create`;
 export const clienteUpdateURL = `${endpoint}/facturacion/cliente-update/`;
+export const clienteDeleteURL = `${endpoint}/facturacion/cliente-delete/`;
 //proveedor
 export const proveedorListURL = `${endpoint}/compra/proveedor-list`;
 export const proveedorCreatetURL = `${endpoint}/compra/proveedor-create`;
 export const proveedorUpdateURL = `${endpoint}/compra/proveedor-update/`;
+export const proveedorDeleteURL = `${endpoint}/compra/proveedor-delete/`;

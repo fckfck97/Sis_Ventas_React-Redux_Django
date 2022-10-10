@@ -1,7 +1,13 @@
+import Delete from "components/loaders/Delete";
 import LoadingTable from "components/loaders/LoadingTable";
+import { clienteDeleteURL } from "constants";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 const ClienteList = ({ cliente_list }) => {
+  const handleDelete = async (URLDELETE, companyId) => {
+    await Delete(URLDELETE, companyId);
+    window.location.href = window.location.href;
+  };
   return (
     <div>
       {cliente_list ? (
@@ -116,6 +122,10 @@ const ClienteList = ({ cliente_list }) => {
                           </button>
                         </Link>
                         <button
+                        onClick={() =>
+                          cliente.id &&
+                          handleDelete(clienteDeleteURL, cliente.id)
+                        }
                           type="button"
                           class="py-1 px-2 text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
                         >

@@ -39,3 +39,7 @@ class ProveedorUpdateView(UpdateAPIView):
 
         else:
             return Response({"error": serializer.errors})
+
+class ProveedorDeleteView(DestroyAPIView):
+    permission_classes = (AllowAny, )
+    queryset = Proveedor.objects.all()
